@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>termaan</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="window">
+    <div class="titlebar">
+      <div class="dot dot-r"></div>
+      <div class="dot dot-y"></div>
+      <div class="dot dot-g"></div>
+      <div class="title-text">termaan — <span>armaan guha</span> — bash</div>
+    </div>
+
+    <div class="terminal" id="terminal"></div>
+
+    <div class="input-row">
+      <div class="prompt">armaan@termaan:~$&nbsp;</div>
+      <div class="input-display" onclick="document.getElementById('cmd-input').focus()">
+        <input type="text" id="cmd-input" autocomplete="off" spellcheck="false" autofocus>
+        <span id="input-text"></span><div class="cursor-block"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="terminal.js"></script>
+</body>
+</html>

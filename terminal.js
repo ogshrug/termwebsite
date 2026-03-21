@@ -93,22 +93,36 @@ function cmdWho() {
 }
 
 function cmdSkills() {
-  const skills = [
-    ['Python',                  92],
-    ['PyTorch / TensorFlow',    88],
-    ['Deep Learning',           90],
-    ['Data Science / pandas',   82],
-    ['Signal Processing',       78],
-    ['JavaScript / HTML / CSS', 75],
-    ['Docker / Kubernetes',     60],
-    ['C / C++',                 65],
-    ['Git / GitHub',            85],
-    ['LaTeX / Research Writing',80],
-  ];
   return [
     sectionTitle('Skills'),
     blank(),
-    ...skills.map(([name, pct]) => skillBar(name, pct)),
+    { html: `<div class="green-dim" style="font-size:11px;letter-spacing:0.08em;margin-bottom:6px">── LANGUAGES ──</div>` },
+    ...([
+      ['Python',                  92],
+      ['JavaScript',              75],
+      ['HTML / CSS',              78],
+      ['C / C++',                 65],
+      ['SQL / JSON',              70],
+    ]).map(([n,p]) => skillBar(n, p)),
+    blank(),
+    { html: `<div class="green-dim" style="font-size:11px;letter-spacing:0.08em;margin-bottom:6px">── AI & ML ──</div>` },
+    ...([
+      ['Deep Learning',           90],
+      ['PyTorch / TensorFlow',    88],
+      ['Data Science / pandas',   82],
+      ['Signal Processing',       78],
+      ['Simulation-based Training',80],
+      ['EPANET Hydraulic Sim',    72],
+    ]).map(([n,p]) => skillBar(n, p)),
+    blank(),
+    { html: `<div class="green-dim" style="font-size:11px;letter-spacing:0.08em;margin-bottom:6px">── WEB & TOOLS ──</div>` },
+    ...([
+      ['Git / GitHub',            85],
+      ['Tailwind CSS',            72],
+      ['Chart.js / QuickChart',   68],
+      ['GitHub Pages / Hosting',  80],
+      ['LaTeX / Research Writing',80],
+    ]).map(([n,p]) => skillBar(n, p)),
     blank(),
     { html: `<div class="muted">Also fluent in: caffeine, Stack Overflow, and reading papers at 2am.</div>` },
   ];
@@ -120,20 +134,34 @@ function cmdProjects() {
     blank(),
     project(
       'AcousticLeakNet',
-      'Simulation-trained deep learning system for acoustic water pipe leak detection in urban distribution networks. Achieves perfect AUROC & F1 on 3 unseen test networks.',
-      'PyTorch · Signal Processing · EPANET · AdamW · Python',
-      '★ GENIUS Olympiad 2026 submission (AI category)',
-      'https://github.com/armaanguha'
+      'Simulation-trained deep learning system for acoustic water pipe leak detection. Trained on 100.5M simulation rows across 8 named networks. Achieves AUROC 1.0000 & F1 1.0000 on 3 unseen test networks (L-TOWN, KY15, Richmond). Hardware cost is 10–42× cheaper than commercial alternatives.',
+      'PyTorch · Signal Processing · EPANET · AdamW · Python · pandas',
+      '★ GENIUS Olympiad 2026 — AI category · Co-authored with Aarav Gupta',
+      'https://github.com/ogshrug'
+    ),
+    project(
+      'KrishiMitra',
+      'Digital assistant for Indian farmers with an interactive dashboard, soil health analysis, AI-powered crop recommendations, real-time weather forecasts, and market price tracking. Multilingual support for Indian languages. Built for the Inter DPS Digital Project Showcase.',
+      'HTML5 · CSS3 · JavaScript · Tailwind CSS · Chart.js · GitHub Pages',
+      '🌾 Live at ogshrug.github.io/interdpsDPSN',
+      'https://github.com/ogshrug/interdpsDPSN'
+    ),
+    project(
+      'kubectl.dev — Kubernetes Cheat Sheet',
+      'Full kubectl command reference site with 130+ commands across 12 categories. Instant search, syntax highlighting, one-click copy, category filters, and danger/tip badges.',
+      'Vanilla JS · HTML · CSS · JetBrains Mono',
+      null,
+      'https://github.com/ogshrug'
     ),
     project(
       'termaan',
-      'This very terminal portfolio! A browser-based interactive terminal to showcase who I am in a way that feels at home.',
+      'This very terminal portfolio. Browser-based interactive terminal with cyberpunk purple CRT aesthetic, full command system, tab autocomplete, history navigation, and boot sequence.',
       'Vanilla JS · CSS · HTML · JetBrains Mono',
       null,
-      null
+      'https://github.com/ogshrug'
     ),
     blank(),
-    { html: `<div class="muted">→ More coming soon. Building in public when I remember to push.</div>` },
+    { html: `<div class="muted">→ 17 repos on GitHub · <span class="tag" onclick="window.open('https://github.com/ogshrug','_blank')">github.com/ogshrug ↗</span></div>` },
   ];
 }
 

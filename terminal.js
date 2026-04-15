@@ -86,7 +86,7 @@ function cmdWho() {
     infoRow('Passion',  'Deep Learning & Applied AI'),
     infoRow('Status',   '🟢 Open to collaborations', 'yellow'),
     blank(),
-    { html: `<div class="white">I'm a high school student obsessed with making AI actually <em style="color:var(--cyan)">do things</em> in the real world — not just predict cats vs dogs. I build systems that solve infrastructure problems, compete in science olympiads, and probably drink too much chai.</div>` },
+    { html: `<div class="white">I'm a high school student obsessed with making AI actually <em style="color:var(--cyan)">do things</em> in the real world — not just predict cats vs dogs. I build systems that solve infrastructure problems, compete in science olympiads, and probably has too much caffeine in his system.</div>` },
     blank(),
     { html: `<div class="muted">→ type <span class="tag" onclick="runCmd('projects')">projects</span> to see what I've built</div>` },
   ];
@@ -137,7 +137,7 @@ function cmdProjects() {
       'Simulation-trained deep learning system for acoustic water pipe leak detection. Trained on 100.5M simulation rows across 8 named networks. Achieves AUROC 1.0000 & F1 1.0000 on 3 unseen test networks (L-TOWN, KY15, Richmond). Hardware cost is 10–42× cheaper than commercial alternatives.',
       'PyTorch · Signal Processing · EPANET · AdamW · Python · pandas',
       '★ GENIUS Olympiad 2026 — AI category · Co-authored with Aarav Gupta',
-      'https://github.com/ogshrug'
+      'https://github.com/ogshrug/SJWP'
     ),
     project(
       'KrishiMitra',
@@ -145,13 +145,6 @@ function cmdProjects() {
       'HTML5 · CSS3 · JavaScript · Tailwind CSS · Chart.js · GitHub Pages',
       '🌾 Live at ogshrug.github.io/interdpsDPSN',
       'https://github.com/ogshrug/interdpsDPSN'
-    ),
-    project(
-      'kubectl.dev — Kubernetes Cheat Sheet',
-      'Full kubectl command reference site with 130+ commands across 12 categories. Instant search, syntax highlighting, one-click copy, category filters, and danger/tip badges.',
-      'Vanilla JS · HTML · CSS · JetBrains Mono',
-      null,
-      'https://github.com/ogshrug'
     ),
     project(
       'termaan',
@@ -225,8 +218,8 @@ function cmdContact() {
     blank(),
     { html: `<div class="white">
       The best way to reach me is a DM or an email. I'm pretty responsive.<br><br>
-      <span class="cmd-link" onclick="window.open('mailto:armaan@example.com')">[email]</span> &nbsp; armaan@example.com<br>
-      <span class="cmd-link" onclick="window.open('https://github.com/armaanguha','_blank')">[github]</span> &nbsp; github.com/armaanguha<br>
+      <span class="cmd-link" onclick="window.open('mailto:armaanguha@gmail.com')">[email]</span> &nbsp; armaanguha@gmail.com<br>
+      <span class="cmd-link" onclick="window.open('https://github.com/ogshrug','_blank')">[github]</span> &nbsp; github.com/ogshrug<br>
       <span class="cmd-link" onclick="window.open('https://linkedin.com','_blank')">[linkedin]</span> &nbsp; linkedin.com/in/armaanguha<br>
       <span class="cmd-link" onclick="window.open('https://twitter.com','_blank')">[twitter]</span> &nbsp; @armaanguha<br>
     </div>` },
@@ -240,7 +233,7 @@ function cmdSocials() {
     sectionTitle('Socials'),
     blank(),
     { html: `<div>
-      <span class="tag" onclick="window.open('https://github.com/armaanguha','_blank')">[ github ]</span>&nbsp;&nbsp;
+      <span class="tag" onclick="window.open('https://github.com/ogshrug/','_blank')">[ github ]</span>&nbsp;&nbsp;
       <span class="tag" onclick="window.open('https://linkedin.com','_blank')">[ linkedin ]</span>&nbsp;&nbsp;
       <span class="tag" onclick="window.open('https://twitter.com','_blank')">[ twitter ]</span>
     </div>` },
@@ -308,7 +301,7 @@ function cmdSecret() {
     blank(),
     { html: `<div class="white">You actually typed 'secret'. I respect the curiosity.<br><br>
     Fun facts about Armaan:<br>
-    <span class="muted">→</span> Has definitely debugged code at 2am while drinking chai<br>
+    <span class="muted">→</span> Has definitely debugged code at 2am while drinking coffee<br>
     <span class="muted">→</span> Names variables things like <span class="green">leak_hunter</span> and <span class="green">pipe_whisperer</span><br>
     <span class="muted">→</span> Genuinely gets excited when a loss curve goes down<br>
     <span class="muted">→</span> Dreams in <span class="cyan">PyTorch</span> sometimes<br>

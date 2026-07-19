@@ -86,7 +86,7 @@ function cmdWho() {
     infoRow('Passion',  'Deep Learning & Applied AI'),
     infoRow('Status',   '🟢 Open to collaborations', 'yellow'),
     blank(),
-    { html: `<div class="white">I'm a high school student obsessed with making AI actually <em style="color:var(--cyan)">do things</em> in the real world — not just predict cats vs dogs. I build systems that solve infrastructure problems, compete in science olympiads, and probably has too much caffeine in his system.</div>` },
+    { html: `<div class="white">I'm a high school student obsessed with making AI actually <em style="color:var(--cyan)">do things</em> in the real world — not just predict cats vs dogs. I build systems that solve infrastructure problems, compete in science olympiads, and drink way too much caffeine.</div>` },
     blank(),
     { html: `<div class="muted">→ type <span class="tag" onclick="runCmd('projects')">projects</span> to see what I've built</div>` },
   ];
@@ -148,7 +148,7 @@ function cmdProjects() {
     ),
     project(
       'termaan',
-      'This very terminal portfolio. Browser-based interactive terminal with cyberpunk purple CRT aesthetic, full command system, tab autocomplete, history navigation, and boot sequence.',
+      'This very terminal portfolio. Browser-based interactive terminal with classic green CRT aesthetic, full command system, tab autocomplete, history navigation, and boot sequence.',
       'Vanilla JS · CSS · HTML · JetBrains Mono',
       null,
       'https://github.com/ogshrug'
@@ -185,7 +185,6 @@ function cmdInterests() {
         <span class="highlight">⚡ Signal Processing</span> — acoustic sensing, FFT, time-series analysis<br>
         <span class="highlight">📖 Reading</span> — sci-fi, philosophy of mind, anything Feynman wrote<br>
         <span class="highlight">🎮 Games</span> — strategy games that feel like debugging a system<br>
-        <span class="highlight">☕ Chai</span> — a non-negotiable life dependency<br>
       </div>` },
   ];
 }
@@ -224,7 +223,7 @@ function cmdContact() {
       <span class="cmd-link" onclick="window.open('https://twitter.com','_blank')">[twitter]</span> &nbsp; @armaanguha<br>
     </div>` },
     blank(),
-    { html: `<div class="muted">Response time: usually within 24h. Faster if it's about AI or chai.</div>` },
+    { html: `<div class="muted">Response time: usually within 24h. Faster if it's about AI.</div>` },
   ];
 }
 
@@ -258,17 +257,17 @@ function cmdNeofetch() {
       <span class="green-dim">Shell:</span>     curiosity 3.14<br>
       <span class="green-dim">Editor:</span>    VS Code (vim sometimes)<br>
       <span class="green-dim">Language:</span>  Python, English, Hindi<br>
-      <span class="green-dim">CPU:</span>       Overclocked on chai<br>
+      <span class="green-dim">CPU:</span>       Overclocked on caffeine<br>
       <span class="green-dim">Memory:</span>    Too many paper PDFs<br>
       <span class="green-dim">GPU:</span>       Training AcousticLeakNet<br>
       <span class="green-dim">Theme:</span>     CRT Green (obviously)<br>
       <span style="margin-top:8px;display:block">
-        <span style="background:#1a001a;color:#1a001a">███</span>
-        <span style="background:#6600aa;color:#6600aa">███</span>
-        <span style="background:#9900cc;color:#9900cc">███</span>
-        <span style="background:#bf00ff;color:#bf00ff">███</span>
-        <span style="background:#cc66ff;color:#cc66ff">███</span>
-        <span style="background:#e8d0f0;color:#e8d0f0">███</span>
+        <span style="background:#001a00;color:#001a00">███</span>
+        <span style="background:#004d00;color:#004d00">███</span>
+        <span style="background:#00cc33;color:#00cc33">███</span>
+        <span style="background:#00ff41;color:#00ff41">███</span>
+        <span style="background:#33ffaa;color:#33ffaa">███</span>
+        <span style="background:#c8ffc8;color:#c8ffc8">███</span>
       </span>
     </div>
   </div>`}];
@@ -289,7 +288,7 @@ function cmdQuote() {
   const [q, a] = quotes[Math.floor(Math.random() * quotes.length)];
   return [
     blank(),
-    { html: `<div style="border-left:2px solid rgba(191,0,255,0.35);padding-left:14px"><div class="white" style="font-style:italic">"${q}"</div><div class="muted" style="margin-top:4px">— ${a}</div></div>` },
+    { html: `<div style="border-left:2px solid rgba(0,255,65,0.35);padding-left:14px"><div class="white" style="font-style:italic">"${q}"</div><div class="muted" style="margin-top:4px">— ${a}</div></div>` },
     blank(),
   ];
 }
@@ -301,7 +300,7 @@ function cmdSecret() {
     blank(),
     { html: `<div class="white">You actually typed 'secret'. I respect the curiosity.<br><br>
     Fun facts about Armaan:<br>
-    <span class="muted">→</span> Has definitely debugged code at 2am while drinking coffee<br>
+    <span class="muted">→</span> Has definitely debugged code at 2am fueled by caffeine<br>
     <span class="muted">→</span> Names variables things like <span class="green">leak_hunter</span> and <span class="green">pipe_whisperer</span><br>
     <span class="muted">→</span> Genuinely gets excited when a loss curve goes down<br>
     <span class="muted">→</span> Dreams in <span class="cyan">PyTorch</span> sometimes<br>
@@ -366,9 +365,7 @@ function infoRow(label, value, cls = '') {
 }
 
 function skillBar(name, pct) {
-  const filled = Math.round(pct / 100 * 20);
-  const bar = '█'.repeat(filled) + '░'.repeat(20 - filled);
-  return { html: `<div class="skill-row"><span class="skill-name">${name}</span><span class="green" style="font-size:12px;letter-spacing:1px;opacity:0.9">${bar}</span><span class="skill-pct"> ${pct}%</span></div>` };
+  return { html: `<div class="skill-row"><span class="skill-name">${name}</span><div class="skill-bar"><div class="skill-fill" style="width:${pct}%"></div></div><span class="skill-pct">${pct}%</span></div>` };
 }
 
 function project(name, desc, tech, note, link) {
